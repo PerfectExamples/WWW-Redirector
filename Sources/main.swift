@@ -20,27 +20,33 @@
 import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
-
+import SwiftString
 
 func redirectHandler(data: [String:Any]) throws -> RequestHandler {
 	return {
 		request, response in
+
+		let host = request.header(.custom(name: "host")) ?? ""
+		if host.startsWith("www.") {
+			response.setBody(string: "<html><head></head><body>ERROR: This is already a www host, cannot redirect further. Please check your DNS.</body></html>")
+			response.completed()
+		} else if host.isEmpty {
+			response.setBody(string: "<html><head></head><body>ERROR: No host header supplied.</body></html>")
+			response.completed()
+		}
+
 		response.status = .movedPermanently
-		response.setHeader(.location, value: "www." + request.header(.custom(name: "host"))! + request.uri)
+		response.setHeader(.location, value: "www." + host + request.uri)
 		response.completed()
 	}
 }
 
 
-
-let port1 = 80
-
 let confData = [
 	"servers": [
-		//	Redirects all traffic to www.*
 		[
 			"name":"localhost",
-			"port":port1,
+			"port":80,
 			"routes":[
 				["method":"get", "uri":"/**", "handler":redirectHandler]
 			]
