@@ -1,0 +1,12 @@
+[Unit]
+Description=Perfect deployed wwwredirector
+
+[Service]
+Type=simple
+WorkingDirectory=/perfect-deployed/WWWRedirector
+ExecStart=/perfect-deployed/WWWRedirector/WWWRedirector
+Restart=always
+PIDFile=/var/run/wwwredirector.pid
+
+[Install]
+WantedBy=multi-user.target
