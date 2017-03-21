@@ -54,10 +54,10 @@ The master branch of this project currently compiles with **Xcode 8.2** or the *
 The following will clone and build the project and launch the server on port 80.
 
 ```
-git clone https://github.com/PerfectExamples/WWWRedirector.git
-cd WWWRedirector
+git clone https://github.com/PerfectExamples/WWW-Redirector.git
+cd WWW-Redirector
 swift build
-.build/debug/WWWRedirector
+.build/debug/WWW-Redirector
 ```
 
 You should see the following output:
