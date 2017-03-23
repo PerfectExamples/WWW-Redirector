@@ -1,4 +1,4 @@
-# WWW Redirector[English](https://github.com/Moon1102/WWW-Redirector/blob/master/README.md)
+# WWW Redirector [English](https://github.com/Moon1102/WWW-Redirector/blob/master/README.md)
 
 <p align="center">
     <a href="http://perfect.org/get-involved.html" target="_blank">
