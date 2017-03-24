@@ -41,7 +41,7 @@
 
 从"non-www.* "到 "www.* "的简单重定向项目
 
-This is a solution to a DNS oddity that does now allow a non-www root hostname (such as perfect.org) to have a CNAME record to a multi-zoned load balancer such as what AWS provides.
+DNS有一个比较怪异的问题，不允许非www开头的根主机名（例如:xn--perfect-i22ms57k.org）在多区域负载均衡系统（比如AWS的负载均衡）中获取CNAME。本工程提供了解决该问题的方案（也就是允许非www开头根主机在跨区负载均衡中获取该变量）
 
 请使用Swift Package Manager编译，之后会产生一个可以独立运行的HTTP服务器应用程序。
 
@@ -70,7 +70,7 @@ swift build
 
 ## 部署到Linux环境
 
-It is recommended that you use Perfect Assistant to deploy, but if you are unable to use PA to deploy please follow the appropriate steps as outlined in the Medium article ["Deploying Server Side Swift to Linode"](https://medium.com/@iamjono/deploying-server-side-swift-to-linode-beb883051c7d#.1cl233jev)
+建议您使用PA部署，如果您无法使用PA部署，请按照文章中所述的适当步骤执行。 ["Deploying Server Side Swift to Linode"](https://medium.com/@iamjono/deploying-server-side-swift-to-linode-beb883051c7d#.1cl233jev)
 
 ## 问题报告
 
