@@ -1,4 +1,4 @@
-# WWW Redirector [简体中文](https://github.com/Moon1102/WWW-Redirector/blob/master/README.zh_CN.md)
+# WWW Redirector [English](https://github.com/Moon1102/WWW-Redirector/blob/master/README.md)
 
 <p align="center">
     <a href="http://perfect.org/get-involved.html" target="_blank">
@@ -39,19 +39,19 @@
     </a>
 </p>
 
-This project builds a simple redirector from non-www.* to www.* 
+从"non-www.* "到 "www.* "的简单重定向项目
 
-This is a solution to a DNS oddity that does now allow a non-www root hostname (such as perfect.org) to have a CNAME record to a multi-zoned load balancer such as what AWS provides.
+DNS有一个比较怪异的问题，不允许非www开头的根主机名（例如:xn--perfect-i22ms57k.org）在多区域负载均衡系统（比如AWS的负载均衡）中获取CNAME。本工程提供了解决该问题的方案（也就是允许非www开头根主机在跨区负载均衡中获取该变量）
 
-It builds with Swift Package Manager and produces a stand-alone HTTP executable.
+请使用Swift Package Manager编译，之后会产生一个可以独立运行的HTTP服务器应用程序。
 
-## Compatibility with Swift
+## Swift 兼容性说明
 
-The master branch of this project currently compiles with **Xcode 8.2** or the **Swift 3.0.2** toolchain on Ubuntu.
+本项目目前使用 **Xcode 8.2** 或者 **Swift 3.0.2** 工具链编译，可以在Ubuntu上使用。
 
-## Building & Running
+## 编译运行
 
-The following will clone and build the project and launch the server on port 80.
+运行以下命令可以运行本示例程序并在80端口创建服务器：
 
 ```
 git clone https://github.com/PerfectExamples/WWWRedirector.git
@@ -60,27 +60,27 @@ swift build
 .build/debug/WWWRedirector
 ```
 
-You should see the following output:
+应该能够看到以下输出：
 
 ```
 [INFO] Starting HTTP server localhost on 0.0.0.0:80
 ```
 
-This means the server is running and waiting for connections.
+意味着服务器已经准备好。
 
-## Deploying on Linux
+## 部署到Linux环境
 
-It is recommended that you use Perfect Assistant to deploy, but if you are unable to use PA to deploy please follow the appropriate steps as outlined in the Medium article ["Deploying Server Side Swift to Linode"](https://medium.com/@iamjono/deploying-server-side-swift-to-linode-beb883051c7d#.1cl233jev)
+建议您使用PA部署，如果您无法使用PA部署，请按照文章中所述的适当步骤执行。 ["Deploying Server Side Swift to Linode"](https://medium.com/@iamjono/deploying-server-side-swift-to-linode-beb883051c7d#.1cl233jev)
 
-## Issues
+## 问题报告
 
-We use JIRA for all bugs and support related issues, therefore the GitHub issues has been disabled.
+目前我们已经把所有错误报告合并转移到了JIRA上，因此github原有的错误汇报功能不能用于本项目。
 
-If you find a mistake, bug, or any other helpful suggestion you'd like to make on the docs please head over to [http://jira.perfect.org:8080/servicedesk/customer/portal/1](http://jira.perfect.org:8080/servicedesk/customer/portal/1) and raise it.
+您的任何宝贵建意见或建议，或者发现我们的程序有问题，欢迎您在这里告诉我们。[http://jira.perfect.org:8080/servicedesk/customer/portal/1](http://jira.perfect.org:8080/servicedesk/customer/portal/1)。
 
-A comprehensive list of open issues can be found at [http://jira.perfect.org:8080/projects/ISS/issues](http://jira.perfect.org:8080/projects/ISS/issues)
+目前问题清单请参考以下链接： [http://jira.perfect.org:8080/projects/ISS/issues](http://jira.perfect.org:8080/projects/ISS/issues)
 
 
 
-## Further Information
-For more information on the Perfect project, please visit [perfect.org](http://perfect.org).
+## 更多内容
+关于Perfect更多内容，请参考[perfect.org](http://perfect.org)官网。
